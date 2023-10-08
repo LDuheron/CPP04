@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:22 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:21:44 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 18:30:16 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Cat : public Animal
 
 		Cat &		operator=( Cat const & rhs );
 
-
+		void	makeSound( void );
 
 };
 

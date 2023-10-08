@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:27 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:21:39 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 18:30:26 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ class Dog : public Animal
 
 		Dog &		operator=( Dog const & rhs );
 
-	
+		void	makeSound( void );
+
 };
 
 std::ostream &			operator<<( std::ostream & o, Dog const & i );

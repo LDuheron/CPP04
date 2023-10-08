@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:38 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:27:23 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 18:33:58 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,3 +66,8 @@ Animal::~Animal()
 // }
 
 // Functions -------------------------------------------------------------------
+
+void	Animal::makeSound( void )
+{
+	std::cout << this->_type << " : RRRooarrRRR.\n";
+}
