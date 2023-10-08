@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:22 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 23:51:37 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 23:24:19 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ class WrongCat : public WrongAnimal
 	public:
 
 		WrongCat();
-		WrongCat(WrongCat const & src);
-		WrongCat(std::string str);
+		WrongCat( WrongCat const & src );
+		WrongCat( std::string str );
 		~WrongCat();
 
-		WrongCat &				operator=(WrongCat const & rhs);
+		WrongCat &				operator=( WrongCat const & rhs );
 	
 		std::string const		&getType(void) const;
 		void					setType(std::string const &type);
 
-		void					makeSound(void) const;
+		void					makeSound( void ) const;
 
 };
 

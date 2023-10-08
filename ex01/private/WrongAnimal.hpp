@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 17:12:22 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 23:51:37 by lduheron         ###   ########.fr       */
+/*   Created: 2023/10/07 17:12:17 by lduheron          #+#    #+#             */
+/*   Updated: 2023/10/08 22:59:04 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#ifndef WrongAnimal_HPP
+# define WrongAnimal_HPP
 
 # include <iostream>
 # include <string>
-# include "WrongAnimal.hpp"
 
-class WrongCat : public WrongAnimal
-{	
+class WrongAnimal
+{
 	private:
-		static 					std::string	_defaultType;
+		static std::string		_defaultType;	
+
+	protected:
+		std::string				_type;
 
 	public:
 
-		WrongCat();
-		WrongCat(WrongCat const & src);
-		WrongCat(std::string str);
-		~WrongCat();
+		WrongAnimal();
+		WrongAnimal( WrongAnimal const & src );
+		WrongAnimal( std::string str );
+		~WrongAnimal();
 
-		WrongCat &				operator=(WrongCat const & rhs);
-	
+		WrongAnimal &			operator=( WrongAnimal const & rhs );
+
 		std::string const		&getType(void) const;
 		void					setType(std::string const &type);
 
-		void					makeSound(void) const;
+		void					makeSound( void ) const;
 
 };
 

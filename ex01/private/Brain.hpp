@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 17:12:22 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 23:51:37 by lduheron         ###   ########.fr       */
+/*   Created: 2023/10/08 23:47:27 by lduheron          #+#    #+#             */
+/*   Updated: 2023/10/09 00:20:53 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 # include <iostream>
 # include <string>
-# include "WrongAnimal.hpp"
 
-class WrongCat : public WrongAnimal
-{	
+class Brain
+{
 	private:
-		static 					std::string	_defaultType;
+
+	protected: 
+		std::string	ideas;
 
 	public:
 
-		WrongCat();
-		WrongCat(WrongCat const & src);
-		WrongCat(std::string str);
-		~WrongCat();
+		Brain();
+		Brain(Brain const & src);
+		Brain(std::string str);
+		~Brain();
 
-		WrongCat &				operator=(WrongCat const & rhs);
-	
-		std::string const		&getType(void) const;
-		void					setType(std::string const &type);
-
-		void					makeSound(void) const;
-
+		Brain	&	operator=(Brain const & rhs);
 };
 
 #endif
