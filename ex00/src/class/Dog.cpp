@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:56 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:33:48 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 18:50:51 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,11 @@ Dog::~Dog()
 
 // Overload --------------------------------------------------------------------
 
-// Dog &				Dog::operator=( Dog const & rhs )
-// {
-// 	return *this;
-// }
+Dog &				Dog::operator=( Dog const & rhs )
+{
+	this->_type = rhs._type;
+	return *this;
+}
 
 // std::ostream &			operator<<( std::ostream & lhs, Dog const & rhs )
 // {
@@ -71,3 +72,6 @@ void	Dog::makeSound( void )
 {
 	std::cout << this->_type << " : wouf.\n";
 }
+
+
+// methords = member functions mais publque exemple accessors. les autres type make sound

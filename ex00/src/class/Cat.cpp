@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:48 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:33:54 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 18:49:43 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,11 @@ Cat::~Cat()
 
 // Overload --------------------------------------------------------------------
 
-// Cat &				Cat::operator=( Cat const & rhs )
-// {
-// 	return *this;
-// }
+Cat &				Cat::operator=( Cat const & rhs )
+{
+	this->_type = rhs._type;
+	return *this;
+}
 
 // std::ostream &			operator<<( std::ostream & lhs, Cat const & rhs )
 // {

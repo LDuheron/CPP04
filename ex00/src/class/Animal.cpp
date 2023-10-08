@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:38 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:33:58 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 18:49:13 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,11 @@ Animal::~Animal()
 
 // Overload --------------------------------------------------------------------
 
-// Animal &				Animal::operator=( Animal const & rhs )
-// {
-// 	return *this;
-// }
+Animal &				Animal::operator=( Animal const & rhs )
+{
+	this->_type = rhs._type;
+	return *this;
+}
 
 // std::ostream &			operator<<( std::ostream & lhs, Animal const & rhs )
 // {
