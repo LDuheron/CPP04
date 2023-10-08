@@ -22,10 +22,12 @@ PRV_DIR		= 	private
 ######################################
 #            SOURCE FILES            #
 ######################################
-SRC			=						\
-				class/Animal.cpp	\
-				class/Cat.cpp		\
-				class/Dog.cpp		\
+SRC			=							\
+				class/Animal.cpp		\
+				class/Cat.cpp			\
+				class/Dog.cpp			\
+				class/WrongAnimal.cpp	\
+				class/WrongCat.cpp		\
 				main.cpp
 
 ######################################

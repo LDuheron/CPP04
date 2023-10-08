@@ -1,58 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:48 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 23:32:26 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 23:01:20 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-std::string	Cat::_defaultType("Cat");
+std::string	WrongCat::_defaultType("WrongCat");
 
 // Constructor -----------------------------------------------------------------
 
 /**
- * @brief	Create a new `Cat` instance,
+ * @brief	Create a new `WrongCat` instance,
  * 			initializing its attributes to ClapTrap default values.
  * 
- * @return	The newly created Cat instance.
+ * @return	The newly created WrongCat instance.
  */
-Cat::Cat() : Animal(_defaultType)
+WrongCat::WrongCat() : WrongAnimal(WrongCat::_defaultType)
 {
-	std::cout << "Cat default constructor called.\n";
+	std::cout << "WrongCat default constructor called.\n";
 }
 
 /**
- * @brief	Construct a new `Cat` instance,
+ * @brief	Construct a new `WrongCat` instance,
  * 			initializing its attributes using another instance as model.
  * 
  * @param	src is the model instance. 
  */
-Cat::Cat( const Cat & src ) : Animal( src )
+WrongCat::WrongCat( const WrongCat & src ) : WrongAnimal( src )
 {
-	std::cout << "Cat copy constructor called.\n";
+	std::cout << "WrongCat copy constructor called.\n";
 }
 
-Cat::Cat( std::string str ) : Animal ( str )
+WrongCat::WrongCat( std::string str ) : WrongAnimal ( str )
 {
-	std::cout << "Cat constructor called.\n";
+	std::cout << "WrongCat constructor called.\n";
 }
 
 // Destructor ------------------------------------------------------------------
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-		std::cout << "Cat destructor called.\n";
+		std::cout << "WrongCat destructor called.\n";
 }
 
 // Overload --------------------------------------------------------------------
 
-Cat &				Cat::operator=( Cat const & rhs )
+WrongCat &				WrongCat::operator=( WrongCat const & rhs )
 {
 	this->_type = rhs._type;
 	return *this;
@@ -60,19 +60,19 @@ Cat &				Cat::operator=( Cat const & rhs )
 
 // Accessors --------------------------------------------------------------------
 
-std::string const			&Cat::getType(void) const
+std::string const			&WrongCat::getType(void) const
 {
 	return (this->_type);
 }
 
-void	Cat::setType(std::string const &type)
+void	WrongCat::setType(std::string const &type)
 {
 	this->_type = type;
 }
 
 // Functions -------------------------------------------------------------------
 
-void	Cat::makeSound( void ) const
+void	WrongCat::makeSound( void ) const
 {
-	std::cout << this->_type << " : miaou.\n";
+	std::cout << this->_type << " : Wouf.\n";
 }

@@ -1,78 +1,77 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/07 17:12:48 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 23:32:26 by lduheron         ###   ########.fr       */
+/*   Created: 2023/10/07 17:12:38 by lduheron          #+#    #+#             */
+/*   Updated: 2023/10/08 23:43:29 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongAnimal.hpp"
 
-std::string	Cat::_defaultType("Cat");
+std::string	WrongAnimal::_defaultType("Wrong Dino");
 
 // Constructor -----------------------------------------------------------------
 
 /**
- * @brief	Create a new `Cat` instance,
+ * @brief	Create a new `WrongAnimal` instance,
  * 			initializing its attributes to ClapTrap default values.
  * 
- * @return	The newly created Cat instance.
+ * @return	The newly created WrongAnimal instance.
  */
-Cat::Cat() : Animal(_defaultType)
+WrongAnimal::WrongAnimal() : _type(_defaultType)
 {
-	std::cout << "Cat default constructor called.\n";
+	std::cout << "WrongAnimal default constructor called.\n";
 }
 
 /**
- * @brief	Construct a new `Cat` instance,
+ * @brief	Construct a new `WrongAnimal` instance,
  * 			initializing its attributes using another instance as model.
  * 
  * @param	src is the model instance. 
  */
-Cat::Cat( const Cat & src ) : Animal( src )
+WrongAnimal::WrongAnimal( const WrongAnimal & src ) : _type(src._type)
 {
-	std::cout << "Cat copy constructor called.\n";
+	std::cout << "WrongAnimal copy constructor called.\n";
 }
 
-Cat::Cat( std::string str ) : Animal ( str )
+WrongAnimal::WrongAnimal( std::string str ) : _type(str)
 {
-	std::cout << "Cat constructor called.\n";
+	std::cout << "WrongAnimal constructor called.\n";
 }
 
 // Destructor ------------------------------------------------------------------
 
-Cat::~Cat()
+WrongAnimal::~WrongAnimal()
 {
-		std::cout << "Cat destructor called.\n";
+		std::cout << "WrongAnimal destructor called.\n";
 }
 
 // Overload --------------------------------------------------------------------
 
-Cat &				Cat::operator=( Cat const & rhs )
+WrongAnimal &				WrongAnimal::operator=( WrongAnimal const & rhs )
 {
 	this->_type = rhs._type;
 	return *this;
 }
 
-// Accessors --------------------------------------------------------------------
-
-std::string const			&Cat::getType(void) const
+// Accessors -------------------------------------------------------------------
+std::string const			&WrongAnimal::getType(void) const
 {
 	return (this->_type);
 }
 
-void	Cat::setType(std::string const &type)
+void	WrongAnimal::setType(std::string const &type)
 {
 	this->_type = type;
 }
 
 // Functions -------------------------------------------------------------------
 
-void	Cat::makeSound( void ) const
+void	WrongAnimal::makeSound( void ) const
 {
-	std::cout << this->_type << " : miaou.\n";
+	std::cout << this->_type << " : RRRRRRRRRRRRROOOOOOOOOOOAR.\n";
 }
