@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:48 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:56:15 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 23:01:20 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ std::string	Cat::_defaultType("Cat");
  * 
  * @return	The newly created Cat instance.
  */
-Cat::Cat() : _type(_defaultType)
+Cat::Cat() : Animal(_defaultType)
 {
 	std::cout << "Cat default constructor called.\n";
 }
@@ -33,12 +33,12 @@ Cat::Cat() : _type(_defaultType)
  * 
  * @param	src is the model instance. 
  */
-Cat::Cat( const Cat & src ) : _type(src._type)
+Cat::Cat( const Cat & src ) : Animal( src )
 {
 	std::cout << "Cat copy constructor called.\n";
 }
 
-Cat::Cat( std::string str ) : _type(str)
+Cat::Cat( std::string str ) : Animal ( str )
 {
 	std::cout << "Cat constructor called.\n";
 }
@@ -58,9 +58,21 @@ Cat &				Cat::operator=( Cat const & rhs )
 	return *this;
 }
 
+// Accessors --------------------------------------------------------------------
+
+std::string const			&Cat::getType(void) const
+{
+	return (this->_type);
+}
+
+void	Cat::setType(std::string const &type)
+{
+	this->_type = type;
+}
+
 // Functions -------------------------------------------------------------------
 
-void	Cat::makeSound( void )
+void	Cat::makeSound( void ) const
 {
 	std::cout << this->_type << " : miaou.\n";
 }

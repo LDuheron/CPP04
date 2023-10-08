@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:38 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:56:22 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 22:06:31 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,20 @@ Animal &				Animal::operator=( Animal const & rhs )
 	return *this;
 }
 
+// Accessors -------------------------------------------------------------------
+std::string const			&Animal::getType(void) const
+{
+	return (this->_type);
+}
+
+void	Animal::setType(std::string const &type)
+{
+	this->_type = type;
+}
+
 // Functions -------------------------------------------------------------------
 
-void	Animal::makeSound( void )
+void	Animal::makeSound( void ) const
 {
 	std::cout << this->_type << " : RRRooarrRRR.\n";
 }

@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:27 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:57:16 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 23:02:29 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class Dog : public Animal
 {
 	private:
 		static std::string	_defaultType;
-		std::string			_type;
 
 	public:
 
@@ -32,7 +31,10 @@ class Dog : public Animal
 
 		Dog &		operator=( Dog const & rhs );
 
-		void	makeSound( void );
+		std::string const		&getType(void) const;
+		void					setType(std::string const &type);
+
+		void		makeSound( void ) const;
 
 };
 

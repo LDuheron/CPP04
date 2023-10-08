@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:56 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:56:35 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 23:02:04 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ std::string	Dog::_defaultType("Dog");
  * 
  * @return	The newly created Dog instance.
  */
-Dog::Dog() : _type(_defaultType)
+Dog::Dog() : Animal(_defaultType)
 {
 	std::cout << "Dog default constructor called.\n";
 }
@@ -33,12 +33,12 @@ Dog::Dog() : _type(_defaultType)
  * 
  * @param	src is the model instance. 
  */
-Dog::Dog( const Dog & src ) : _type(src._type)
+Dog::Dog( const Dog & src ) : Animal(src)
 {
 	std::cout << "Dog copy constructor called.\n";
 }
 
-Dog::Dog( std::string str ) : _type(str)
+Dog::Dog( std::string str ) : Animal(str)
 {
 	std::cout << "Dog constructor called.\n";
 }
@@ -58,9 +58,21 @@ Dog &				Dog::operator=( Dog const & rhs )
 	return *this;
 }
 
+// Accessors --------------------------------------------------------------------
+
+std::string const			&Dog::getType(void) const
+{
+	return (this->_type);
+}
+
+void	Dog::setType(std::string const &type)
+{
+	this->_type = type;
+}
+
 // Functions -------------------------------------------------------------------
 
-void	Dog::makeSound( void )
+void	Dog::makeSound( void ) const
 {
 	std::cout << this->_type << " : wouf.\n";
 }

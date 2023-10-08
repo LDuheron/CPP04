@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:22 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:57:27 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 23:02:25 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class Cat : public Animal
 {	
 	private:
 		static std::string	_defaultType;
-		std::string			_type;
 
 	public:
 
@@ -31,8 +30,11 @@ class Cat : public Animal
 		~Cat();
 
 		Cat &		operator=( Cat const & rhs );
+	
+		std::string const		&getType(void) const;
+		void					setType(std::string const &type);
 
-		void	makeSound( void );
+		void		makeSound( void ) const;
 
 };
 
