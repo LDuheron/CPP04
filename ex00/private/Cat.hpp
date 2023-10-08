@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:22 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:30:16 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 18:57:27 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,5 @@ class Cat : public Animal
 		void	makeSound( void );
 
 };
-
-std::ostream &			operator<<( std::ostream & o, Cat const & i );
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:17 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:25:33 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 18:57:33 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,5 @@ class Animal
 		void	makeSound( void );
 
 };
-
-std::ostream &			operator<<( std::ostream & o, Animal const & i );
 
 #endif

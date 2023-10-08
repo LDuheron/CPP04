@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:38 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 18:49:13 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/08 18:56:22 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ Animal::~Animal()
 		std::cout << "Animal destructor called.\n";
 }
 
-// Accessors -------------------------------------------------------------------
-
 // Overload --------------------------------------------------------------------
 
 Animal &				Animal::operator=( Animal const & rhs )
@@ -59,12 +57,6 @@ Animal &				Animal::operator=( Animal const & rhs )
 	this->_type = rhs._type;
 	return *this;
 }
-
-// std::ostream &			operator<<( std::ostream & lhs, Animal const & rhs )
-// {
-// 	lhs << ;
-// 	return lhs;
-// }
 
 // Functions -------------------------------------------------------------------
 
