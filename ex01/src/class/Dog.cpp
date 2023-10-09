@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:56 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 23:02:04 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:35:52 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ std::string	Dog::_defaultType("Dog");
 Dog::Dog() : Animal(_defaultType)
 {
 	std::cout << "Dog default constructor called.\n";
+	this->_brain = new Brain;
 }
 
 /**
@@ -36,11 +37,13 @@ Dog::Dog() : Animal(_defaultType)
 Dog::Dog( const Dog & src ) : Animal(src)
 {
 	std::cout << "Dog copy constructor called.\n";
+	this->_brain = new Brain;
 }
 
 Dog::Dog( std::string str ) : Animal(str)
 {
 	std::cout << "Dog constructor called.\n";
+	this->_brain = new Brain;
 }
 
 // Destructor ------------------------------------------------------------------
@@ -48,6 +51,7 @@ Dog::Dog( std::string str ) : Animal(str)
 Dog::~Dog()
 {
 		std::cout << "Dog destructor called.\n";
+		delete this->_brain;
 }
 
 // Overload --------------------------------------------------------------------

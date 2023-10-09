@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:22 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 23:41:52 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:36:23 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,20 @@
 # include <iostream>
 # include <string>
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Cat : public Animal
 {	
 	private:
 		static 					std::string	_defaultType;
+		Brain					*_brain;
 
 	public:
 
 		Cat();
 		Cat( Cat const & src );
 		Cat( std::string str );
-		~Cat();
+		virtual ~Cat();
 
 		Cat &					operator=( Cat const & rhs );
 	

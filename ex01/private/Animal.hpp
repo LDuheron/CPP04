@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:12:17 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/08 23:42:13 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:36:58 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Animal
 		Animal();
 		Animal( Animal const & src );
 		Animal( std::string str );
-		~Animal();
+		virtual ~Animal();
 
 		Animal &				operator=( Animal const & rhs );
 

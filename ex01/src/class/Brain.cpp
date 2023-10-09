@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 23:56:01 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/09 00:20:32 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:20:09 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,22 @@
 Brain::Brain()
 {
 	std::cout << "Brain default constructor called.\n";
-	// for (int i = 0; i < 100; i++)
-	// 	ideas[i] = "GENIUS THOUGHT.\n";
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = "GENIUS THOUGHT.\n";
 }
 
-Brain::Brain( const Brain & src ) : ideas(src.ideas)
+Brain::Brain( const Brain & src )
 {
 	std::cout << "Brain copy constructor called.\n";
-	// for (int i = 0; i < 100; i++)
-	// 	ideas[i] = src.ideas[i];
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = src.ideas[i];
 }
 
-Brain::Brain( std::string str ) : ideas(str)
+Brain::Brain( std::string str )
 {
 	std::cout << "Brain constructor called.\n";
-	// for (int i = 0; i < 100; i++)
-	// 	ideas[i] = str;
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = str;
 }
 
 // Destructor ------------------------------------------------------------------
@@ -46,7 +46,8 @@ Brain::~Brain()
 
 Brain &				Brain::operator=( Brain const & rhs )
 {
-	this->ideas = rhs.ideas;
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = rhs.ideas[i];
 	return *this;
 }
 
