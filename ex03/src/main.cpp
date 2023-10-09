@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:17:27 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/09 19:16:42 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 21:14:07 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "ICharacter.hpp"
 #include "Character.hpp"
 #include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
 
 int	main(void)
 {

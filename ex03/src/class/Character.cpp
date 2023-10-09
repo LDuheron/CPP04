@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 18:48:14 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/09 20:04:42 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 21:12:23 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Character::Character(Character const & src) : _name(src._name), _inventory(), _c
 {
 	for (int i = 0 ; i < 4; i++)
 	{
-		if (src._inventory[i] != NULL)
+		if (src._inventory[i])
 			this->_inventory[i] = src._inventory[i]->clone();
 	}
 	std::cout << "Copy character constructor called.\n";
@@ -52,7 +52,18 @@ Character &				Character::operator=( Character const & rhs )
 {
 	if (this != &rhs)
 	{
-		this->_type = rhs._type;
+		this->_name = rhs._name;
+		this->_cpt_inventory = rhs._cpt_inventory;
+		for (int i = 0 ; i < 4; i++)
+		{
+			if (this->_inventory[i])
+			{
+				delete this->_inventory[i];
+				this->_inventory[i] = NULL;
+			}
+			if (rhs._inventory[i])
+				this->_inventory[i] = rhs._inventory[i]->clone();
+		}
 	}
 	return *this;
 }
@@ -63,6 +74,7 @@ std::string const & Character::getName() const
 {
 	return(this->_name);
 }
+
 void 				Character::equip(AMateria* m)
 {
 	if (this->_cpt_inventory == 4)
@@ -72,8 +84,10 @@ void 				Character::equip(AMateria* m)
 		for (int i = 0; i < 4; i++)
 		{
 			if (!this->_inventory[i])
+			{
 				this->_inventory[i] = m;
 				break;
+			}
 		}
 		this->_cpt_inventory++;
 	}

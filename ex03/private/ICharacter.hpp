@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:54:46 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/09 18:53:59 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 21:18:00 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class ICharacter
 		virtual void 				equip(AMateria* m) = 0;
 		virtual void 				unequip(int idx) = 0;
 		virtual void 				use(int idx, ICharacter& target) = 0;
-};
 
-std::ostream &		operator<<(std::ostream & lhs, ICharacter const & rhs );
+		ICharacter	&operator=(ICharacter const &rhs);
+};
 
 #endif

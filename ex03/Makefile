@@ -24,8 +24,10 @@ PRV_DIR		= 	private
 ######################################
 SRC			=							\
 				class/AMateria.cpp		\
+				class/Character.cpp		\
 				class/Cure.cpp			\
 				class/Ice.cpp			\
+				class/MateriaSource.cpp	\
 				main.cpp
 
 ######################################

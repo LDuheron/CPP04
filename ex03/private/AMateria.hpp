@@ -6,7 +6,7 @@
 /*   By: lduheron <lduheron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 16:02:56 by lduheron          #+#    #+#             */
-/*   Updated: 2023/10/09 18:53:50 by lduheron         ###   ########.fr       */
+/*   Updated: 2023/10/09 21:08:22 by lduheron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class AMateria
 		AMateria();
 		AMateria(AMateria const & src);
 		AMateria(std::string const & type);
-		~AMateria();
+		virtual ~AMateria();
 
 		AMateria &				operator=( AMateria const & rhs );
 
